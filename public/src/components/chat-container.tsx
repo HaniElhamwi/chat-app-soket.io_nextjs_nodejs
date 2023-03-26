@@ -47,16 +47,17 @@ export default function ChatContainer({
     msgs.push({ fromSelf: true, message: msg });
     setMessages(msgs);
   };
-  useEffect(() => {
-    if (socket.current) {
-      socket.current.on("msg-recieve", (msg) => {
-        setArrivalMessage({ fromSelf: false, message: msg });
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  // if (socket.current) {
+  socket.current.on("msg-receive", (msg: any) => {
+    console.log("socket.current", msg);
+    setArrivalMessage({ fromSelf: false, message: msg });
+  });
+  // }
+  // }, []);
 
   useEffect(() => {
-    arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
+    arrivalMessage && setMessages((prev: any) => [...prev, arrivalMessage]);
   }, [arrivalMessage]);
 
   useEffect(() => {

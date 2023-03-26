@@ -40,14 +40,12 @@ export default function SetAvatar({
       const user = await JSON.parse(
         localStorage.getItem("chat-app-user") || "{}"
       );
-      console.log(user);
       const { data } = await axios.post(`${setAvatar}/${user._id}`, {
         image: avatars[selectedAvatar],
       });
       if (data.isSet) {
         user.isAvatarImageSet = true;
         user.avatarImage = data.image;
-        console.log(data);
         localStorage.setItem("chat-app-user", JSON.stringify(user));
         router.push("/");
       } else {
@@ -110,7 +108,7 @@ export async function getServerSideProps() {
       const image: any = await axios.get(
         `${api}/${Math.round(Math.random() * 100)}`
       );
-      const buffer = new Buffer(image.data);
+      const buffer = Buffer.allocUnsafe(image.data);
       avatars.push(buffer.toString("base64"));
     }
     // avatars(data);

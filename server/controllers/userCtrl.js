@@ -16,7 +16,6 @@ const register = async (req, res, next) => {
       password: passwordHash,
       username,
     });
-    console.log(user);
     delete user.password;
     res.status(200).json({ status: true, user });
   } catch (ex) {
@@ -32,7 +31,6 @@ const login = async (req, res, next) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) res.send("Incorrect password");
     delete user.password;
-    console.log("login", user);
     res.json({ status: true, user });
   } catch (err) {
     next(err);

@@ -52,7 +52,6 @@ function Register() {
         email: values.email,
         password: values.password,
       });
-      console.log("data", data);
       if (data.status) {
         localStorage.setItem("chat-app-user", JSON.stringify(data.user));
         router.push("/");

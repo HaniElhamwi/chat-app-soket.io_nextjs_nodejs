@@ -2,7 +2,6 @@ const Messages = require("../models/messageModel");
 
 const addMessage = async (req, res, next) => {
   try {
-    console.log(req.body);
     const { from, to, message } = req.body;
     const messageData = await Messages.create({
       message: {
@@ -25,7 +24,6 @@ const addMessage = async (req, res, next) => {
 const getAllMessages = async (req, res, next) => {
   const { from, to } = req.body;
   try {
-    console.log(from, to);
     const messages = await Messages.find({
       users: { $all: [from, to] },
     }).sort({ createdAt: 1 });
@@ -36,7 +34,6 @@ const getAllMessages = async (req, res, next) => {
       };
     });
     res.status(200).json(projectMessages);
-    console.log(projectMessages);
   } catch (err) {
     next(err);
   }

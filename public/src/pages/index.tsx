@@ -40,7 +40,7 @@ export default function Home() {
       socket.current = io(host);
       socket.current.emit("add-user", currentUser._id);
     }
-  }, [currentUser]);
+  }, [currentUser, currentChat]);
 
   useEffect(() => {
     const fetch = async () => {

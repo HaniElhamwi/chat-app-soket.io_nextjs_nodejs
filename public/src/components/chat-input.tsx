@@ -11,7 +11,6 @@ export default function ChatInput(props: { handleSendMessage: any }) {
   const [msg, setMsg] = useState("");
 
   const handleEmojiPickerHideShow = () => {
-    console.log("clicked");
     setShowEmojiPicker(!showEmojiPicker);
   };
 
