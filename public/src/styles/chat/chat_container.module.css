@@ -1,0 +1,74 @@
+.chat_container {
+}
+.chat_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem;
+  gap: 1rem;
+  padding: 2px 0.5rem;
+}
+.chat_details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.chat_img {
+  height: 3rem;
+}
+.chat_name {
+  color: white;
+}
+
+.input_container {
+  display: grid;
+  grid-template-columns: 5% 95%;
+  align-items: center;
+  background-color: #080420;
+  padding-bottom: 0.3rem;
+  padding: 0 1rem;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.input_text_container {
+  width: 100%;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff34;
+  justify-content: center;
+}
+
+.input {
+  background-color: transparent;
+  width: 100%;
+  height: 60%;
+  color: white;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.input::selection {
+  background-color: #9186f3;
+}
+.input:focus {
+  outline: none;
+}
+.input_button_container {
+  padding: 0.3rem 2rem;
+  background-repeat: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9186f3;
+  border: none;
+}

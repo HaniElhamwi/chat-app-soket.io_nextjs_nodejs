@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #131324;
+  gap: 3rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loader {
+  max-line-size: 100px;
+}
+
+.avatars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.img {
+  height: 8rem;
+  width: 8rem;
+}
+.selected {
+  border: 0.4rem solid #4e04ff;
+}
+.submit_button {
+  background-color: #997af0 !important;
+  color: white;
+  border-radius: 0.4rem;
+  font-size: uppercase;
+  padding: 1rem 2rem;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+.submit_button:hover {
+  background-color: #4e0eff;
+}
+.avatar {
+  border: 0.4rem solid transparent;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}

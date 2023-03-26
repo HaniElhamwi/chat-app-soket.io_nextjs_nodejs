@@ -1,0 +1,94 @@
+/* .second_cont {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background-color: #080420;
+  height: 100%;
+  width: 100%;
+} */
+.second_cont {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background-color: #080420;
+  height: 90vh;
+  width: 100%;
+}
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.img {
+  height: 2rem;
+}
+.title {
+  color: white;
+  text-transform: uppercase;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  gap: 0.8rem;
+}
+.contact {
+  background-color: #ffffff39;
+  min-height: 6rem;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  overflow: auto;
+  transition: 0.5s ease-in-out;
+}
+.contactAvatar {
+  height: 3rem;
+}
+.contactImage {
+  height: 3rem;
+}
+
+.username_title {
+  color: white;
+}
+.selected {
+  background-color: #9186f3;
+}
+.current_user {
+  background-color: #0d0d30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.current_user_avatar {
+  height: 4rem;
+}
+.current_user_title {
+  color: white;
+}
+
+.contacts::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Webkit scrollbar track */
+.contacts::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Webkit scrollbar thumb */
+.contacts::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Webkit scrollbar thumb on hover */
+.contacts::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
